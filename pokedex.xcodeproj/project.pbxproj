@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		2429153D29806396009CA206 /* pokedex Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2429153C29806396009CA206 /* pokedex Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2429154229806396009CA206 /* pokedexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429154129806396009CA206 /* pokedexApp.swift */; };
-		2429154429806396009CA206 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2429154329806396009CA206 /* ContentView.swift */; };
 		2429154629806397009CA206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2429154529806397009CA206 /* Assets.xcassets */; };
 		2429154929806397009CA206 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2429154829806397009CA206 /* Preview Assets.xcassets */; };
+		242915852980C1FC009CA206 /* PokemonAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 242915842980C1FC009CA206 /* PokemonAPI */; };
+		2476AF652992C9F600481FA3 /* PaginatedResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476AF642992C9F600481FA3 /* PaginatedResultsView.swift */; };
+		2476AF672992CA1D00481FA3 /* PokemonAPI+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476AF662992CA1D00481FA3 /* PokemonAPI+.swift */; };
+		2476AF692992CA6300481FA3 /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476AF682992CA6300481FA3 /* Image+.swift */; };
+		2476AF6B2992CA8B00481FA3 /* PageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476AF6A2992CA8B00481FA3 /* PageSelectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +46,12 @@
 		2429153629806396009CA206 /* pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2429153C29806396009CA206 /* pokedex Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pokedex Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2429154129806396009CA206 /* pokedexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokedexApp.swift; sourceTree = "<group>"; };
-		2429154329806396009CA206 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2429154529806397009CA206 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2429154829806397009CA206 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2476AF642992C9F600481FA3 /* PaginatedResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedResultsView.swift; sourceTree = "<group>"; };
+		2476AF662992CA1D00481FA3 /* PokemonAPI+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PokemonAPI+.swift"; sourceTree = "<group>"; };
+		2476AF682992CA6300481FA3 /* Image+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
+		2476AF6A2992CA8B00481FA3 /* PageSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSelectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				242915852980C1FC009CA206 /* PokemonAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +87,10 @@
 			isa = PBXGroup;
 			children = (
 				2429154129806396009CA206 /* pokedexApp.swift */,
-				2429154329806396009CA206 /* ContentView.swift */,
+				2476AF642992C9F600481FA3 /* PaginatedResultsView.swift */,
+				2476AF6A2992CA8B00481FA3 /* PageSelectView.swift */,
+				2476AF662992CA1D00481FA3 /* PokemonAPI+.swift */,
+				2476AF682992CA6300481FA3 /* Image+.swift */,
 				2429154529806397009CA206 /* Assets.xcassets */,
 				2429154729806397009CA206 /* Preview Content */,
 			);
@@ -127,6 +138,9 @@
 			dependencies = (
 			);
 			name = "pokedex Watch App";
+			packageProductDependencies = (
+				242915842980C1FC009CA206 /* PokemonAPI */,
+			);
 			productName = "pokedex Watch App";
 			productReference = 2429153C29806396009CA206 /* pokedex Watch App.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +172,9 @@
 				Base,
 			);
 			mainGroup = 2429152F29806396009CA206;
+			packageReferences = (
+				242915832980C1FC009CA206 /* XCRemoteSwiftPackageReference "PokemonAPI" */,
+			);
 			productRefGroup = 2429153729806396009CA206 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -192,8 +209,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2429154429806396009CA206 /* ContentView.swift in Sources */,
+				2476AF672992CA1D00481FA3 /* PokemonAPI+.swift in Sources */,
+				2476AF692992CA6300481FA3 /* Image+.swift in Sources */,
+				2476AF6B2992CA8B00481FA3 /* PageSelectView.swift in Sources */,
 				2429154229806396009CA206 /* pokedexApp.swift in Sources */,
+				2476AF652992C9F600481FA3 /* PaginatedResultsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +462,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		242915832980C1FC009CA206 /* XCRemoteSwiftPackageReference "PokemonAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kinkofer/PokemonAPI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		242915842980C1FC009CA206 /* PokemonAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 242915832980C1FC009CA206 /* XCRemoteSwiftPackageReference "PokemonAPI" */;
+			productName = PokemonAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2429153029806396009CA206 /* Project object */;
 }

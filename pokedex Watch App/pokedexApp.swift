@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import PokemonAPI
 
 @main
 struct pokedex_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let pokemonAPI = PokemonAPI()
+            NavigationView {
+                PaginatedResultsView()
+                    .environmentObject(pokemonAPI)
+            }
         }
     }
 }
