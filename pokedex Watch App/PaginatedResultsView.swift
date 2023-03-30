@@ -8,7 +8,6 @@
 import SwiftUI
 import PokemonAPI
 
-
 struct PaginatedResultsView: View {
     @EnvironmentObject var pokemonAPI: PokemonAPI
     @State var error: Error?
@@ -19,52 +18,53 @@ struct PaginatedResultsView: View {
     
     
     var body: some View {
+      NavigationStack {
         ScrollView {
-            Spacer()
-            mainContent
-                .toolbar {
-                    ToolbarItemGroup(placement: .primaryAction) {
-                        menu
-                    }
-                }
-                .task {
-                    await fetchPokemon()
-                }
+          Spacer()
+          mainContent
+            .toolbar {
+              ToolbarItemGroup(placement: .primaryAction) {
+                menu
+              }
+            }
+            .task {
+              await fetchPokemon()
+            }
         }
+      }
     }
-    
-    
+
     var mainContent: some View {
         VStack {
             if let error = error {
                 Text("An error occurred: \(error.localizedDescription)")
             }
             else if let pagedObject = pagedObject,
-                    let pokemonResults = pagedObject.results as? [PKMNamedAPIResource] {
+                    let pokemonResults = pagedObject.results as? [PKMNamedAPIResource<PKMPokemon>] {
                 Group {
                     ForEach(pokemonResults, id: \.url) { pokemon in
-                        Button {
-                            
-                        } label: {
-                            HStack {
-                                Text(pokemon.name?.capitalized ?? "Unknown Pokemon")
-                                let url = pokemon.url?.dropLast().replacingOccurrences(of: "https://pokeapi.co/api/v2/pokemon/", with: "") ?? ""
-                                AsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(url).png")) { image in
-                                    image
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                } placeholder: {
-                                    Image(systemName: "photo.circle.fill")
-                                }
-                                .frame(width: 30, height: 30)
+                      let pokemonName = pokemon.name?.capitalized ?? "Unknown Pokemon"
+                      NavigationLink {
+                        PokemonDetailView(imageURL: pokemon.url?.pokemonIconURL, pokemonName: pokemonName)
+                      } label: {
+                        HStack {
+                            Text(pokemonName)
+                            AsyncImage(url: pokemon.url?.pokemonIconURL) { image in
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            } placeholder: {
+                                Image(systemName: "photo.circle.fill")
                             }
+                            .frame(width: 30, height: 30)
                         }
+
+                      }
                     }
                 }
             }
         }
     }
-    
     
     var menu: some View {
         VStack {
@@ -136,6 +136,13 @@ struct PaginatedResultsView: View {
             self.error = error
         }
     }
+}
+
+extension String {
+  var pokemonIconURL: URL? {
+    let url = dropLast().replacingOccurrences(of: "https://pokeapi.co/api/v2/pokemon/", with: "")
+    return URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(url).png")
+  }
 }
 
 

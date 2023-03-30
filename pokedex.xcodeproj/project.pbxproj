@@ -16,6 +16,7 @@
 		2476AF672992CA1D00481FA3 /* PokemonAPI+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476AF662992CA1D00481FA3 /* PokemonAPI+.swift */; };
 		2476AF692992CA6300481FA3 /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476AF682992CA6300481FA3 /* Image+.swift */; };
 		2476AF6B2992CA8B00481FA3 /* PageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2476AF6A2992CA8B00481FA3 /* PageSelectView.swift */; };
+		9B04CAB329D5C63600FC58DB /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B04CAB229D5C63600FC58DB /* PokemonDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		2476AF662992CA1D00481FA3 /* PokemonAPI+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PokemonAPI+.swift"; sourceTree = "<group>"; };
 		2476AF682992CA6300481FA3 /* Image+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
 		2476AF6A2992CA8B00481FA3 /* PageSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageSelectView.swift; sourceTree = "<group>"; };
+		9B04CAB229D5C63600FC58DB /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			children = (
 				2429154129806396009CA206 /* pokedexApp.swift */,
 				2476AF642992C9F600481FA3 /* PaginatedResultsView.swift */,
+				9B04CAB229D5C63600FC58DB /* PokemonDetailView.swift */,
 				2476AF6A2992CA8B00481FA3 /* PageSelectView.swift */,
 				2476AF662992CA1D00481FA3 /* PokemonAPI+.swift */,
 				2476AF682992CA6300481FA3 /* Image+.swift */,
@@ -214,6 +217,7 @@
 				2476AF6B2992CA8B00481FA3 /* PageSelectView.swift in Sources */,
 				2429154229806396009CA206 /* pokedexApp.swift in Sources */,
 				2476AF652992C9F600481FA3 /* PaginatedResultsView.swift in Sources */,
+				9B04CAB329D5C63600FC58DB /* PokemonDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pokedex Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = W2U7ETVQ2D;
+				DEVELOPMENT_TEAM = PGX7W4A2GC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = pokedex;
@@ -356,7 +360,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = danialepaco.pokedex.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = watchos.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -375,7 +379,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"pokedex Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = W2U7ETVQ2D;
+				DEVELOPMENT_TEAM = PGX7W4A2GC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = pokedex;
@@ -386,7 +390,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = danialepaco.pokedex.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = watchos.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -404,10 +408,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W2U7ETVQ2D;
+				DEVELOPMENT_TEAM = PGX7W4A2GC;
 				INFOPLIST_KEY_CFBundleDisplayName = pokedex;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = danialepaco.pokedex;
+				PRODUCT_BUNDLE_IDENTIFIER = poc.pokedex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
